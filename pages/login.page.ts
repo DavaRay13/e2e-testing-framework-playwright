@@ -7,6 +7,8 @@ export class LoginPage {
   readonly loginButton: Locator;
   readonly menuButton: Locator;
   readonly logoutButton: Locator;
+  readonly errorMessage: Locator;
+
 
   // 3. Constructor: Momen "Menghubungkan" Class ini dengan tab browser asli
   constructor(private readonly page: Page) {
@@ -16,6 +18,7 @@ export class LoginPage {
     this.loginButton = page.locator('#login-button');
     this.menuButton = page.locator('#react-burger-menu-btn');
     this.logoutButton = page.locator('[data-test="logout-sidebar-link"]');
+    this.errorMessage = page.locator('[data-test="error"]');
 
   }
 

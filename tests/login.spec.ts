@@ -25,3 +25,29 @@ test.describe('Fitur Autentikasi', () => {
         await expect(loginPage.loginButton).toBeVisible();
     });
 });
+
+test.describe('Login Failed cases', () => {
+    test("User dapet pesan error pas password salah", async ({ page }) => {
+        const loginPage = new LoginPage(page);
+        
+        await loginPage.bukaWeb();
+        //masukin username bener tapi password salah
+        await loginPage.isiLogin('standard_user', 'pass_salah');
+
+        //memastikan apakah pesan error muncul
+        await expect (loginPage.errorMessage).toBeVisible();
+        
+        //cek tulisannya mengandung kata tertentu
+        await expect (loginPage.errorMessage).toContainText('do not match');
+
+        
+
+
+    });
+});
+
+
+
+
+
+
