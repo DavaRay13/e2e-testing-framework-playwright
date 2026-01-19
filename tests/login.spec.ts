@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login.page';
+import userData from '../data/user.json';
 
 // 1. Kelompokkan tes lu (biar rapi di laporan nanti)
 test.describe('Fitur Autentikasi', () => {
@@ -10,7 +11,7 @@ test.describe('Fitur Autentikasi', () => {
 
         // 3. Eksekusi Langkah (Cerita)
         await loginPage.bukaWeb();
-        await loginPage.isiLogin('standard_user', 'secret_sauce');
+        await loginPage.isiLogin(userData.validUser.username, userData.validUser.password );
 
         // 4. Assertion Pertama (Cek apakah berhasil masuk)
         // Kita cek apakah URL-nya mengandung kata 'inventory'
@@ -32,7 +33,7 @@ test.describe('Login Failed cases', () => {
         
         await loginPage.bukaWeb();
         //masukin username bener tapi password salah
-        await loginPage.isiLogin('standard_user', 'pass_salah');
+        await loginPage.isiLogin(userData.invalidUser.username, userData.invalidUser.password);
 
         //memastikan apakah pesan error muncul
         await expect (loginPage.errorMessage).toBeVisible();
