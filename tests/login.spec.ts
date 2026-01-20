@@ -20,6 +20,7 @@ test.describe('Fitur Autentikasi', () => {
 
         // 5. Eksekusi Logout (Pakai fungsi yang lu buat tadi)
         await loginPage.klikLogout();
+        await expect(loginPage.menuButton).toBeHidden();
 
         // 6. Assertion Kedua (Cek apakah berhasil balik ke login)
         // Kita pastiin tombol login muncul lagi

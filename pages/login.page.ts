@@ -35,7 +35,7 @@ export class LoginPage {
 
   async klikLogout(){
     await this.menuButton.click();
-    await this.logoutButton.waitFor({state: 'visible'});
+    await this.logoutButton.waitFor({state: 'visible', timeout: 5000});
     await this.logoutButton.click();
   }
 }
