@@ -22,3 +22,18 @@ This framework is built using the **Page Object Model (POM)** to separate test l
 ├── tests/              # Test Specifications (E2E Test Scenarios)
 ├── playwright.config.ts # Global Test Configuration
 └── package.json        # Dependencies & Test Scripts
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/DavaRay13/e2e-testing-framework-playwright.git](https://github.com/DavaRay13/e2e-testing-framework-playwright.git)
+2.**Install dependencies:**
+  ```bash
+   npm install
+3.**install Playwright Browsers:**
+  ```bash
+   npx playwright install
+
+
+
