@@ -38,4 +38,12 @@ export class LoginPage {
     await this.logoutButton.waitFor({state: 'visible', timeout: 5000});
     await this.logoutButton.click();
   }
+
+  async klikTwitterIcon(context: any) {
+    const pagePromise = context.waitForEvent('page');
+    await this.page.locator('[data-test="social-twitter"]').click();
+    const newPage = await pagePromise;
+    return newPage;
+
+  }
 }

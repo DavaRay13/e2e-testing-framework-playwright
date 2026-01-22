@@ -41,13 +41,22 @@ test.describe('Login Failed cases', () => {
         
         //cek tulisannya mengandung kata tertentu
         await expect (loginPage.errorMessage).toContainText('do not match');
-
-        
-
-
+    
     });
 });
 
+test ('User Harus Bisa Buka Tab Twitter', async ({page, context}) =>{
+    const loginPage = new LoginPage(page);
+  await loginPage.bukaWeb();
+  await loginPage.isiLogin(userData.validUser.username, userData.validUser.password);
+
+  const twitterPage = await loginPage.klikTwitterIcon(context);
+
+  await expect(twitterPage).toHaveURL(/.*x.com/);
+  await twitterPage.close();
+
+
+});
 
 
 
