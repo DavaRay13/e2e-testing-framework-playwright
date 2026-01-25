@@ -20,7 +20,7 @@ This framework is built using the **Page Object Model (POM)** to separate test l
 ├── playwright.config.ts  # Global Test Configuration
 └── package.json         # Dependencies & Test Scripts
 ```
-## 🔥 Features Developed (Mission 1 - 5)
+## 🔥 Features Developed (Mission 1 - 7)
 [M1-M2] Core Automation: Mastering selectors, actions (click, fill), and basic assertions.
 
 [M3] Page Object Model (POM): Implementing a structured architecture for better code reusability.
@@ -28,7 +28,9 @@ This framework is built using the **Page Object Model (POM)** to separate test l
 [M4] Data-Driven Testing (DDT): Driving tests using external JSON data.
 
 [M5] Advanced Assertions: Implementing deep state validation for UI consistency.
+
 [M6] Handling Dynamic Elements
+
 [M7] Working with Multiple Pages & Frames.
 
 
