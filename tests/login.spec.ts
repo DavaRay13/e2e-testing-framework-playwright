@@ -2,14 +2,14 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login.page';
 import userData from '../data/user.json';
 
-// 1. Kelompokkan tes (biar rapi di laporan)
+// 1. Kelompokkan tes 
 test.describe('Fitur Autentikasi', () => {
     
     test('User harus bisa login dan logout dengan benar', async ({ page }) => {
         // 2. Lahirin si Kamus (LoginPage) ke dalam skenario ini
         const loginPage = new LoginPage(page);
 
-        // 3. Eksekusi Langkah (Cerita)
+        // 3. Eksekusi Langkah 
         await loginPage.bukaWeb();
         await loginPage.isiLogin(userData.validUser.username, userData.validUser.password );
 
@@ -18,7 +18,7 @@ test.describe('Fitur Autentikasi', () => {
         await expect(page).toHaveURL(/.*inventory/);
 
 
-        // 5. Eksekusi Logout (Pakai fungsi yang lu buat tadi)
+        // 5. Eksekusi Logout 
         await loginPage.klikLogout();
         await expect(loginPage.menuButton).toBeHidden();
 
