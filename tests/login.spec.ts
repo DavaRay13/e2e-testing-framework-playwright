@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login.page';
 import userData from '../data/user.json';
 
-// 1. Kelompokkan tes lu (biar rapi di laporan nanti)
+// 1. Kelompokkan tes (biar rapi di laporan)
 test.describe('Fitur Autentikasi', () => {
     
     test('User harus bisa login dan logout dengan benar', async ({ page }) => {

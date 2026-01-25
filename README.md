@@ -28,6 +28,8 @@ This framework is built using the **Page Object Model (POM)** to separate test l
 [M4] Data-Driven Testing (DDT): Driving tests using external JSON data.
 
 [M5] Advanced Assertions: Implementing deep state validation for UI consistency.
+[M6] Handling Dynamic Elements
+[M7] Working with Multiple Pages & Frames.
 
 
 
