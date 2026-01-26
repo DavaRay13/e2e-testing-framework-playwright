@@ -5,7 +5,10 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Page_Object_Model-orange?style=for-the-badge)
 
 ## 🚀 Overview
-Welcome to the **SauceDemo E2E Automation Framework**. This project is a professional-grade testing suite built with **Playwright** and **TypeScript**. It demonstrates the implementation of industry-standard patterns to ensure web application reliability.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a6af6ed1-e515-45c7-8c84-c6d71c2b29c1" alt="Playwright Demo" width="100%" style="border-radius: 8px; border: 1px solid #ddd;">
+  <p><i>Real-time Automated E2E Execution on SauceDemo Web</i></p>
+</div>
 
 ---
 
